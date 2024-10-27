@@ -1,0 +1,54 @@
+body {
+  background-color: #fff;
+  color: #333;
+  font: 1.2em / 1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 1vw;
+  margin: 1vw;
+  border: 3px solid black;
+}
+
+.grid {
+  height: 400px;
+}
+
+.grid > * {
+  background-color: #4D7298;
+  border: 2px solid #77A6B6;
+  border-radius: 0.5em;
+  color: #fff;
+  padding: 50px;
+}
+
+/*MODIFICAR DESDE ESTA LINEA HACIA ABAJO*/
+/*SOLO UTILIZAR GRID*/
+/*Se debe crear una cuadricula en la que se colocaran automaticamente los 6 elementos.  
+La cuadricula debe tener tres columnas, 2 filas y un gap de 20 pixeles.*/
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px; /* Aumenta el espacio entre columnas y filas */
+  column-gap: 7px;
+  row-gap: 20px;
+  height: 200px;
+  padding: 0px 100px;  /* Espacio extra en la parte superior e inferior */
+  max-width: 900px; /* Limita el ancho total del contenedor */
+  margin: 0 auto; /* Centra la cuadrícula en la pantalla */
+  place-content: center;
+  align-content: space-between;
+}
+
+.grid > * {
+  background-color: #4D7298;
+  border-radius: 0.5em;
+  color: #fff;
+  padding: 30px; /* Mismo padding en ancho y largo */
+  text-align: center;
+  box-sizing: border-box; 
+  max-width: 110px;
+  
+}
+
+
+

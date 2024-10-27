@@ -1,0 +1,76 @@
+body {
+  background-color: #fff;
+  color: #333;
+  font: 1.2em / 1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 1vw;
+  margin: 1vw;
+  border: 3px solid black;
+  width: 800px;
+}
+
+.grid {
+  height: auto;
+}
+
+.grid > * {
+  background-color: #4D7298;
+  border: 2px solid #77A6B6;
+  border-radius: 0.5em;
+  color: #fff;
+  padding: 50px;
+  font-size: 1vw;
+}
+
+.item1, .item2, .item9 {
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 1vw;
+  background-color: red;
+}
+
+/*MODIFICAR DESDE ESTA LINEA HACIA ABAJO*/
+/*SOLO UTILIZAR GRID*/
+
+/* Configuracion de la cuadricula principal */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
+  gap: 10px; /* Espacio entre los elementos */
+  padding-bottom: 2px;
+  border-radius: 0.5em;
+}
+
+/* Estilo general para todos los elementos dentro de la cuadricula */
+.grid > * {
+  background-color: #4D7298;
+  border: 2px solid #77A6B6;
+  border-radius: 0.5em;
+  color: #fff;
+  padding: 45px;
+  font-size: 1vw;
+  text-align: center;
+  text-transform: uppercase;
+ 
+}
+
+/* Elemento con el nombre "UNO" */
+.item1 {
+  background-color: red;
+  grid-column: 2 / 4; /* Ocupa las columnas 2 y 3 */
+  grid-row: 3 / 5; /* Ocupa las filas 3 y 4 */
+}
+
+/* Elemento con el nombre "DOS" */
+.item2 {
+  background-color: red;
+  grid-column: 1 / 4; /* Ocupa las tres columnas en la primera fila */
+  grid-row: 1; /* Se coloca en la primera fila */
+}
+
+/* Elemento con el nombre "NUEVE" */
+.item9 {
+  background-color: red;
+  grid-column: 1 / 2; /* Coloca "Nueve" en la primera columna */
+  grid-row: 5 / 8; /* Ocupa desde la fila 6 hasta la fila 7 */
+}
